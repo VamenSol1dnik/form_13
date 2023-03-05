@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/main.js"></script>
+    <title>buy/sell</title>
+</head>
+<body>
+    <div id="product">
+        <h2>Назва продукту</h2>
+        <p>Опис продукту</p>
+        <button id="buy-btn">Купити</button>
+      </div>
+      
+      <form action="form.php">
+        <h2>Форма замовлення</h2>
+        <form>
+          <label>ПІБ покупця:
+            <input type="text" id="name" required>
+          </label>
+          <label>Місто:
+            <select id="city" required>
+              <option value="">Виберіть місто</option>
+              <option value="Київ">Київ</option>
+              <option value="Львів">Львів</option>
+              <option value="Харків">Харків</option>
+            </select>
+          </label>
+          <label>Склад Нової пошти для надсилання:
+            <input type="text" id="post-office" required>
+          </label>
+          <label>Післяплата:
+            <input type="radio" name="payment-type" value="cash-on-delivery" required>Післяплата
+          </label>
+          <label>Оплата банківською карткою:
+            <input type="radio" name="payment-type" value="credit-card">Оплата банківською карткою
+          </label>
+          <label>Кількість продукції:
+            <input type="number" id="quantity" value="1" min="1" max="10" required>
+          </label>
+          <label>Коментар до замовлення:
+            <textarea id="comment"></textarea>
+          </label>
+          <button type="submit">Підтвердити замовлення</button>
+        </form>
+    </form>
+      
+      <div id="order-info" style="display: none;">
+        <h2>Інформація про замовлення</h2>
+        <p id="product-info"></p>
+        <p>Ім'я покупця: <span id="customer-name"></span></p>
+        <p>Місто: <span id="customer-city"></span></p>
+        <p>Склад Нової пошти для надсилання: <span id="customer-post-office"></span></p>
+        <p>Спосіб оплати: <span id="customer-payment-type"></span></p>
+        <p>Кількість продукції: <span id="customer-quantity"></span></p>
+        <p>Коментар до замовлення: <span id="customer-comment"></span></p>
+      </div>
+</body>
+</html>
